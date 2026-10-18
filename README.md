@@ -13,7 +13,7 @@ Rumble✅ means controller rumble/vibration is supported and/or enabled.
 |Platform|Wireless|Notes|
 |:-|:-|:-|
 |Stadia (All platforms)|✅|Native support|
-|Others - True wireless|✅|Bluetooth mode (official firmware update, 2023). Verified on macOS: pairs natively, input works in SDL apps, and rumble over Bluetooth works in Ryujinx (see Desktop - MacOS).|
+|Others - True wireless|✅|Bluetooth mode (official firmware update, 2023). Verified on macOS: pairs natively in System Settings and works in SDL-based apps (see Desktop - MacOS).|
 |Others - Pseudo-wireless|✅|[StadiaWireless](https://github.com/helloparthshah/StadiaWireless) \- Uses your phone as a bridge. Windows only.|
 
 # Wired
@@ -48,7 +48,7 @@ Rumble✅ means controller rumble/vibration is supported and/or enabled.
 ||Chromium (see below)|✅||✅|Rumble verification needed|
 ||Moonlight|✅||?||
 ||OpenEmu|✅||?|Requires manual button mapping|
-||Ryujinx (Switch emulator, SDL 2.30)|?|?|✅|Rumble over **Bluetooth** works when SDL uses its own Stadia driver: launch with `SDL_JOYSTICK_HIDAPI=1 SDL_JOYSTICK_HIDAPI_STADIA=1 SDL_JOYSTICK_MFI=0` and enable rumble in Input settings. Verified in-game (Mario Kart 8 Deluxe) on macOS 26 / Apple Silicon. [Guide + test tool](https://github.com/jkfran/stadia-mac-rumble)|
+||Ryujinx (Switch emulator, SDL-based)|?|?|✅|Rumble over **Bluetooth** works — just enable Rumble in Options → Input. SDL uses its HIDAPI Stadia driver (with Bluetooth rumble) by default on macOS; no extra flags needed. Verified in-game (Mario Kart 8 Deluxe) on macOS 26 / Apple Silicon. [Details + test tool](https://github.com/jkfran/stadia-mac-rumble)|
 ||Safari|❌||||
 ||GeForce Now App|❌||||
 ||Parsec|❌|||Some buttons not producing input (triggers, thumb down)|
